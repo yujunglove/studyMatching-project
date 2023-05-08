@@ -27,7 +27,7 @@ public class AccountController {
     }
 
     @GetMapping("/sign-up")
-    public String signUpForm(Model model){
+    public String signUpForm(Model model) {
         model.addAttribute(new SignUpForm());
         return "account/sign-up";
     }
@@ -37,6 +37,7 @@ public class AccountController {
         if (errors.hasErrors()) {
             return "account/sign-up";
         }
+
         Account account = accountService.processNewAccount(signUpForm);
         accountService.login(account);
         return "redirect:/";

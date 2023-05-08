@@ -36,8 +36,8 @@ public class AccountService {
     private Account saveNewAccount(@Valid SignUpForm signUpForm) {
         Account account = Account.builder()
                 .email(signUpForm.getEmail())
-                .nickname(signUpForm.getNickName())
-                .password(signUpForm.getPassWord())
+                .nickname(signUpForm.getNickname())
+                .password(signUpForm.getPassword())
                 .studyCreatedByWeb(true)
                 .studyEnrollmentResultByWeb(true)
                 .studyUpdateByWeb(true)
@@ -62,6 +62,8 @@ public class AccountService {
     public void login(Account account) {
         UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(
                 account.getNickname(),
+//                new UserAccount(account),
+                //위처럼 쓰면 프린시퍼로 객체가 된다. 닉네임 쓰지 않고 이러게 쓰기
                 account.getPassword(),
                 List.of(new SimpleGrantedAuthority("ROLE_USER")));
         SecurityContextHolder.getContext().setAuthentication(token);
