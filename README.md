@@ -1,5 +1,5 @@
 # 📙 studyMatching-project
-StudyMatching 스터디 소모임  구현 프로젝트
+StudyMatching 스터디 소모임 구현 개인 프로젝트
 
 # 📒 STACK
 <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=HTML5&logoColor=white"/> <img src="https://img.shields.io/badge/CSS-8CA1AF?style=flat-square&logo=CSS&logoColor=white"/> <img src="https://img.shields.io/badge/JAVASCRIPT-FFCD00?style=flat-square&logo=JAVASCRIPT&logoColor=white"/>
