@@ -1,4 +1,4 @@
-package com.studymatching.studymatching.account;
+package com.studymatching.account;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -23,6 +23,7 @@ public class AccountController {
                 .andExpect(status().isOk())
                 //뷰가 보이는지
                 .andExpect(view().name("/account/sign-up"));
+
 
     }
 }

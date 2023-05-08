@@ -1,5 +1,6 @@
-package com.studymatching.studymatching.config;
+package com.studymatching.config;
 
+import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -20,4 +21,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //나머지는 로그인 해야만 쓸수 있음
                 .anyRequest().authenticated();
     }
+
+    //image는 인증을 하지 말아라
+    //common 하위에 있는 애들은 인증을 안해도 되게
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring()
+                .mvcMatchers("/node_modules/**")
+                .requestMatchers(PathRequest.toStaticResources().atCommonLocations());
+    }
+
 }
