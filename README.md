@@ -10,3 +10,4 @@ StudyMatching 스터디 소모임 구현 개인 프로젝트
 <img width="400" alt="image" src="https://github.com/yujunglove/studyMatching-project/assets/120998460/75a14e2d-af14-4363-8bf1-b16703d01096">
 <img width="400" alt="image" src="https://github.com/yujunglove/studyMatching-project/assets/120998460/df02076a-83e7-4b68-a1cf-3ecf9a0102da">
 
+  
